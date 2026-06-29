@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Storage.Models.ProductViewModel>
+
+@{
+    ViewData["Title"] = "Inventory";
+}
+
+<h1>Inventory</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Count</th>
+            <th>Inventory Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Count</td>
+                <td>@item.InventoryValue</td>
+            </tr>
+        }
+    </tbody>
+</table>
