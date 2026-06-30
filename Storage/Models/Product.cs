@@ -15,8 +15,7 @@ namespace Storage.Models
 
         [DataType(DataType.Date)]
         public DateTime OrderDate { get; set; }
-        
-        
+                
         [StringLength(50)]
         public required string Category { get; set; }
 
