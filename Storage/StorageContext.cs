@@ -1,6 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+using Storage.Models;
 
-public class StorageContext(DbContextOptions<StorageContext> options) : DbContext(options)
+public class StorageContext : DbContext
 {
-    public DbSet<Storage.Models.Product> Product { get; set; } = default!;
+    public DbSet<Product> Product => Set<Product>();
+
+    public StorageContext(DbContextOptions<StorageContext> options) : base(options)
+    {
+    }
 }
